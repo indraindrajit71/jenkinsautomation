@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+               sh 'echo "this is my multiple step pipeline"'
+	           sh '''
+                   echo "By the way we can do more"
+		           ls -lah
+  	            '''
+            }
+        }
+        
+    }
+}
